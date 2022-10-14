@@ -20,6 +20,7 @@ const initialState = {
   trending: "no",
   category: "",
   description: "",
+  comments: [],
 };
 
 const categoryOption = [
@@ -30,6 +31,8 @@ const categoryOption = [
   "Sports",
   "Business",
 ];
+
+// update setProgress as form is filled in
 
 const AddEditBlog = ({ user, setActive }) => {
   const [form, setForm] = useState(initialState);
@@ -239,6 +242,21 @@ const AddEditBlog = ({ user, setActive }) => {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+        <div className="col-12 text-center">
+          <div className="progress">
+            <div
+              className="progress-bar col-8"
+              role="progressbar"
+              style={{ width: `${progress}%` }}
+              // round to nearest integer
+              aria-valuenow={Math.round(progress)}
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              {progress}%
+            </div>
           </div>
         </div>
       </div>

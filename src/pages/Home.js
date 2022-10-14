@@ -21,6 +21,7 @@ const Home = ({ setActive, user }) => {
   const [blogs, setBlogs] = useState([]);
   const [tags, setTags] = useState([]);
   const [trendBlogs, setTrendBlogs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const getTrendingBlogs = async () => {
     const blogRef = collection(db, "blogs");
@@ -36,17 +37,41 @@ const Home = ({ setActive, user }) => {
   useEffect(() => {
     getTrendingBlogs();
     const unsub = onSnapshot(
+      // onSnapshot is a listener that listens for changes in the database and updates the UI accordingly
       collection(db, "blogs"),
       (snapshot) => {
         let list = [];
         let tags = [];
         snapshot.docs.forEach((doc) => {
+          // docs is an array of all the documents in the collection
           tags.push(...doc.get("tags"));
           list.push({ id: doc.id, ...doc.data() });
         });
         const uniqueTags = [...new Set(tags)];
         setTags(uniqueTags);
         setBlogs(list);
+
+        const filterBlogs = (blogs) => {
+          // filterBlogs is a function that filters the blogs based on the search term entered by the user
+          if (searchTerm === "") {
+            return blogs;
+          } else {
+            console.log(blogs);
+            return blogs.filter((blog) => {
+              // if the blog title or description includes the search term, return the blog
+              return (
+                blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                blog.description
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase()) ||
+                blog.tags.includes(searchTerm.toLowerCase())
+              );
+            });
+          }
+        };
+
+        setBlogs(filterBlogs(list));
+
         setLoading(false);
         setActive("home");
       },
@@ -59,7 +84,7 @@ const Home = ({ setActive, user }) => {
       unsub();
       getTrendingBlogs();
     };
-  }, [setActive]);
+  }, [setActive, searchTerm]);
 
   if (loading) {
     return <Spinner />;
@@ -82,6 +107,20 @@ const Home = ({ setActive, user }) => {
     <div className="container-fluid pb-4 pt-4 padding">
       <div className="container padding">
         <div className="row mx-0">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="input-group mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search Blogs..."
+                  aria-label="Search Blogs..."
+                  aria-describedby="basic-addon2"
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
+            </div>
+          </div>
           <Trending blogs={trendBlogs} />
           <div className="col-md-8">
             <BlogSection
@@ -91,7 +130,11 @@ const Home = ({ setActive, user }) => {
             />
           </div>
           <div className="col-md-3">
-            <Tags tags={tags} />
+            <Tags
+              tags={tags}
+              setSearchTerm={setSearchTerm}
+              searchTerm={searchTerm}
+            />
             <MostPopular blogs={blogs} />
           </div>
         </div>

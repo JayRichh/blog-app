@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 import MostPopular from "../components/MostPopular";
 import Tags from "../components/Tags";
 import { db } from "../firebase";
+import Comments from "../components/Comments";
 
-const Detail = ({ setActive }) => {
+const Detail = ({ setActive, user }) => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
   const [blogs, setBlogs] = useState([]);
@@ -57,6 +58,28 @@ const Detail = ({ setActive }) => {
                 {blog?.timestamp.toDate().toDateString()}
               </span>
               <p className="text-start">{blog?.description}</p>
+              <div className="comments">
+                <div className="comment-box" style={{ display: "flex" }}>
+                  {/* {blog?.comments?.map((comment) => (
+                    <div className="comment" key={comment.id}>
+                      <div className="commenter-pic">
+                        <img src={comment.imgUrl} alt="" />
+
+                        <div className="commenter-name">
+                          <h5>{comment.name}</h5>
+                          <span>
+                            {comment.timestamp.toDate().toDateString()}
+                          </span>
+
+                          <p>{comment.comment}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))} */}
+
+                  <Comments blogId={id} user={user} />
+                </div>
+              </div>
             </div>
             <div className="col-md-3">
               <Tags tags={tags} />
