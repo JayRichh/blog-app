@@ -13,14 +13,17 @@
   * Create dynamic blog app with CRUD functionality
   * Include user sign-in and sign-up functionality to make blog posts
   * Host project on firebase
-  
+
+### Scope Creep:
+
+  * Search bar with filtering of blogs based on titles, tags or descriptions
+  * Filter via tags
+  * Commenting system on blogs for authenticated users
   
 ### To-Do:
 
   * Tidy styling of blog
-  * Add search functionality
   * Include Admin login auth
-  * Include commenting on blog posts for authenticated users
   
 ## Tools:
 
