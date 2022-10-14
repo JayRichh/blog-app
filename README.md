@@ -2,7 +2,7 @@
 
 ## Create a Blog Application with React.js & Firebase for the backend, user authentication
 
-[Check out a live version here](https://blog-app-1169d.web.app/)
+[Check out a live version here](https://jayrichh.github.io/blog-app/)
 
 ![Screenshot 2022-10-13 223311](https://user-images.githubusercontent.com/18374849/195715604-602bfbb4-e006-4cc1-ba46-7aea350ed2d2.png)
 
