@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/blog-app/static/css/main.6b787e2d.css",
+    "main.js": "/blog-app/static/js/main.43ebf39c.js",
+    "static/media/Roboto-MediumItalic.ttf": "/blog-app/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
+    "static/media/Roboto-BoldItalic.ttf": "/blog-app/static/media/Roboto-BoldItalic.87d61cea6fe1d235d4a8.ttf",
+    "static/media/Roboto-Italic.ttf": "/blog-app/static/media/Roboto-Italic.87f3afe16a8c3c370634.ttf",
+    "static/media/Roboto-Medium.ttf": "/blog-app/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
+    "static/media/Roboto-Regular.ttf": "/blog-app/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/Roboto-Bold.ttf": "/blog-app/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
+    "index.html": "/blog-app/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.6b787e2d.css",
+    "static/js/main.43ebf39c.js"
+  ]
+}
