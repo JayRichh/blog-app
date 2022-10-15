@@ -73,9 +73,6 @@ function App() {
           element={<Auth setActive={setActive} setUser={setUser} />}
         />
         <Route path="*" element={<NotFound />} />
-        <Route path="/blog-app" exact> 
-          <Navigate to="/" />
-        </Route>
       </Routes>
     </div>
   );
