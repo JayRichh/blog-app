@@ -4,7 +4,7 @@
 
 [Check out a live version here](https://jayrichh.github.io/blog-app/)
 
-![Screenshot 2022-10-13 223311](https://user-images.githubusercontent.com/18374849/195715604-602bfbb4-e006-4cc1-ba46-7aea350ed2d2.png)
+![Screenshot-from-2022-10-16-02-55-15](https://user-images.githubusercontent.com/18374849/195990476-69d01e72-033d-430a-9227-e3c7abada0ab.png)
 
 ## Overview
 
@@ -12,13 +12,12 @@
 
   * Create dynamic blog app with CRUD functionality
   * Include user sign-in and sign-up functionality to make blog posts
-  * Host project on firebase
+  * Allow post editing and deletion from firebase with authenticated athor of post
 
 ### Scope Creep:
 
   * Search bar with filtering of blogs based on titles, tags or descriptions
   * Filter via tags
-  * Commenting system on blogs for authenticated users
   
 ### To-Do:
 
@@ -34,6 +33,6 @@
   * React Icons & Hooks
   * Firebase
   * Sass
-  
+ 
  
  Big learning curve to get the blog fetching info and displaying correctly
