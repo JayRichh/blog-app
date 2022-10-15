@@ -109,7 +109,7 @@ const Home = ({ setActive, user }) => {
         <div className="row mx-0">
           <div className="row">
             <div className="col-md-12">
-              <div className="input-group mb-3">
+              <div className="input-group mb-2">
                 <input
                   type="text"
                   className="form-control"
@@ -129,7 +129,7 @@ const Home = ({ setActive, user }) => {
               handleDelete={handleDelete}
             />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-4">
             <Tags
               tags={tags}
               setSearchTerm={setSearchTerm}

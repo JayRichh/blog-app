@@ -3,7 +3,7 @@ import "./App.css";
 import "./style.scss";
 import "./media-query.css";
 import Home from "./pages/Home";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate, Redirect } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Detail from "./pages/Detail";
@@ -73,6 +73,9 @@ function App() {
           element={<Auth setActive={setActive} setUser={setUser} />}
         />
         <Route path="*" element={<NotFound />} />
+        <Route path="/" exact> 
+          <Redirect to="/home" />
+        </Route>
       </Routes>
     </div>
   );

@@ -33,6 +33,7 @@ const Comments = ({ blogId, user }) => {
       comments.push({id: doc.id, ...doc.data()});
     });
     setComments(comments);
+    console.log(comments);
   };
 
   const deleteComment = async (id) => { 

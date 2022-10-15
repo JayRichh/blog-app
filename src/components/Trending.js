@@ -7,6 +7,9 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 const Trending = ({ blogs }) => {
   const options = {
     loop: true,
+    autoplay: true,
+    autoplayTimeout: 3500,
+    autoplayHoverPause: true,
     margin: 10,
     nav: true,
     responsive: {

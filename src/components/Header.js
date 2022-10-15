@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // eslint-disable-next-line 
 import transitions from "bootstrap";
+import logo from "../images/logo.png";
 
 const Header = ({ active, setActive, user, handleLogout }) => {
   const userId = user?.uid;
@@ -32,7 +33,7 @@ const Header = ({ active, setActive, user, handleLogout }) => {
                 onClick={() => setActive("home")}
               >
                 <img
-                  src="./images/logo.png"
+                  src={logo}
                   alt="logo"
                   className="logo"
                   style={{ width: "100px", filter: "invert(100%)" }}
