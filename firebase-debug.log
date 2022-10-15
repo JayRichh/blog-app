@@ -1,0 +1,44 @@
+[debug] [2022-10-15T14:11:09.810Z] ----------------------------------------------------------------------
+[debug] [2022-10-15T14:11:09.811Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init hosting
+[debug] [2022-10-15T14:11:09.812Z] CLI Version:   11.14.3
+[debug] [2022-10-15T14:11:09.812Z] Platform:      linux
+[debug] [2022-10-15T14:11:09.812Z] Node Version:  v18.8.0
+[debug] [2022-10-15T14:11:09.812Z] Time:          Sun Oct 16 2022 03:11:09 GMT+1300 (New Zealand Daylight Time)
+[debug] [2022-10-15T14:11:09.812Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-15T14:11:09.855Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-15T14:11:09.856Z] > authorizing via signed-in user (jsrichh5@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/jayden/repos/blog-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-15T14:11:09.858Z] Using project from CLI flag: blog-app-1169d
+[debug] [2022-10-15T14:11:09.860Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blog-app-1169d [none]
+[debug] [2022-10-15T14:11:12.904Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blog-app-1169d 200
+[debug] [2022-10-15T14:11:12.904Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blog-app-1169d {"projectId":"blog-app-1169d","projectNumber":"624331907171","displayName":"blog-app","name":"projects/blog-app-1169d","resources":{"hostingSite":"blog-app-1169d","storageBucket":"blog-app-1169d.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_222f161b-3184-4c57-a6a3-5dad98d85f47"}
+[info] i  Using project blog-app-1169d (blog-app) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

@@ -73,8 +73,8 @@ function App() {
           element={<Auth setActive={setActive} setUser={setUser} />}
         />
         <Route path="*" element={<NotFound />} />
-        <Route path="/" exact> 
-          <Redirect to="/home" />
+        <Route path="/blog-app" exact> 
+          <Redirect to="/" />
         </Route>
       </Routes>
     </div>
